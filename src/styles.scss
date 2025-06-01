@@ -1,0 +1,16 @@
+/* Estilos globais amigáveis para usar com Bootstrap */
+
+html, body {
+  height: 100%;
+  background-color: #a7a7a7; /* tom suave de cinza */
+  font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+  color: #212529;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.main-content {
+  padding: 1.5rem;
+}
+
+

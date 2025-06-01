@@ -1,0 +1,93 @@
+<app-atom-preloader *ngIf="loading | async"></app-atom-preloader>
+<div class="container">
+  <div class="d-flex justify-content-start  align-content-center gap-2 my-md-0 my-4">
+    <app-atom-button
+      [size]="'large'"
+      
+      [iconButton]="true"
+      icon="chevron_left"
+      (clicked)="back()"
+      [tooltip]="'clientForm.backTooltip' | translate">
+    </app-atom-button>
+
+    <h2 class="mt-md-0 mt-2">{{ isEditMode ? ('clientForm.titleEdit' | translate) : ('clientForm.titleCreate' | translate) }}</h2>
+  </div>
+
+  <form [formGroup]="form" (ngSubmit)="submit()" class="row gy-3">
+    <div class="col-12">
+      <h5>{{ 'clientForm.sectionPersonalData' | translate }}</h5>
+    </div>
+
+    <app-atom-input
+      class="col-12 col-md-6"
+      [label]="'clientForm.nameLabel' | translate"
+      type="text"
+      [control]="form.get('nome')">
+    </app-atom-input>
+
+    <app-atom-input
+      class="col-12 col-md-6"
+      [label]="'clientForm.emailLabel' | translate"
+      type="email"
+      [control]="form.get('email')">
+    </app-atom-input>
+
+    <app-atom-input
+      class="col-12 col-md-6"
+      [label]="'clientForm.phoneLabel' | translate"
+      type="text"
+      [mask]="'(00) 0 0000-0000'"
+      [control]="form.get('telefone')">
+    </app-atom-input>
+
+    <div class="col-12 mt-4">
+      <h5>{{ 'clientForm.sectionAddress' | translate }}</h5>
+    </div>
+
+    <app-atom-input
+      class="col-12 col-md-6"
+      [label]="'clientForm.streetLabel' | translate"
+      type="text"
+      [control]="form.get('endereco.rua')">
+    </app-atom-input>
+
+    <app-atom-input
+      class="col-6 col-md-2"
+      [label]="'clientForm.numberLabel' | translate"
+      type="text"
+      [control]="form.get('endereco.numero')">
+    </app-atom-input>
+
+    <app-atom-input
+      class="col-6 col-md-4"
+      [label]="'clientForm.zipcodeLabel' | translate"
+      type="text"
+       [mask]="'00000-000'"
+      [control]="form.get('endereco.cep')">
+    </app-atom-input>
+
+    <app-atom-input
+      class="col-12 col-md-6"
+      [label]="'clientForm.cityLabel' | translate"
+      type="text"
+      [control]="form.get('endereco.cidade')">
+    </app-atom-input>
+
+    <app-atom-input
+      class="col-12 col-md-6"
+      [label]="'clientForm.stateLabel' | translate"
+      type="text"
+      [control]="form.get('endereco.estado')">
+    </app-atom-input>
+
+    <div class="col-12 text-end mt-4">
+      <app-atom-button
+        [icon]="isEditMode ? 'autorenew' : 'save'"
+        [label]="isEditMode ? ('clientForm.submitEdit' | translate) : ('clientForm.submitCreate' | translate)"
+        color="primary"
+        [tooltip]="'clientForm.submitTooltip' | translate"
+        type="submit">
+      </app-atom-button>
+    </div>
+  </form>
+</div>

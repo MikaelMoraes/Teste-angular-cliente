@@ -1,0 +1,61 @@
+{
+    "IDIOMA": {
+        "IDIOMA": "Idioma",
+        "PORTUGUES": "Português",
+        "ENGLISH": "Inglês",
+        "ESPANHOL": "Espanhol"
+    },
+    "clientList": {
+        "customersTitle": "Clientes",
+        "newCustomerLabel": "Novo Cliente",
+        "newCustomerTooltip": "Adicionar novo cliente",
+        "viewLabel": "Visualizar",
+        "viewTooltip": "Ver detalhes do cliente",
+        "editLabel": "Editar",
+        "editTooltip": "Editar cliente",
+        "deleteLabel": "Excluir",
+        "deleteTooltip": "Excluir cliente",
+        "viewDialogTitle": "Detalhes do Cliente",
+        "deleteDialogTitle": "Excluir Cliente",
+        "confirmDeleteMessage": "Você tem certeza que deseja excluir o(a) cliente {{name}}?",
+        "confirmButton": "Sim",
+        "cancelButton": "Não",
+        "closeButton": "Fechar",
+        "userDetailId": "ID",
+        "userDetailName": "Nome",
+        "userDetailEmail": "E-mail",
+        "userDetailPhone": "Telefone",
+        "userDetailPhoneNotProvided": "Não informado",
+        "userDetailAddressTitle": "Endereço",
+        "userDetailZipcode": "CEP",
+        "userDetailCity": "Cidade",
+        "userDetailState": "Estado",
+        "userDetailNumber": "Número",
+        "userDetailStreet": "Rua",
+        "columnId": "ID",
+        "columnName": "Nome",
+        "columnEmail": "E-mail",
+        "columnActions": "Ações"
+    },
+    "clientForm": {
+        "backTooltip": "Voltar para a tela anterior!",
+        "titleCreate": "Criar cliente",
+        "titleEdit": "Editar cliente",
+        "sectionPersonalData": "Dados Pessoais",
+        "nameLabel": "Nome",
+        "emailLabel": "Email",
+        "phoneLabel": "Telefone",
+        "sectionAddress": "Endereço",
+        "streetLabel": "Rua",
+        "numberLabel": "Número",
+        "zipcodeLabel": "CEP",
+        "cityLabel": "Cidade",
+        "stateLabel": "Estado",
+        "submitTooltip": "Salvar dados do cliente",
+        "submitCreate": "Salvar Cliente",
+        "submitEdit": "Atualizar Cliente"
+    },
+    "TABLE": {
+        "NO_DATA": "Nenhum dado encontrado."
+    }
+}

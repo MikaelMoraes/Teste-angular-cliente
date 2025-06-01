@@ -1,0 +1,94 @@
+<app-atom-preloader *ngIf="loading | async"></app-atom-preloader>
+<div class="container-fluid">
+  <div class="d-flex justify-content-between  align-content-center my-3">
+    <h3>{{ ('clientList.customersTitle' | translate) }}</h3>
+    <app-atom-button
+      icon="add"
+      [label]="('clientList.newCustomerLabel' | translate)"
+      color="primary"
+      [tooltip]="('clientList.newCustomerTooltip' | translate)"
+      (clicked)="goToNewUser()">
+    </app-atom-button>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <app-molecule-tables [columns]="columns" [dataSource]="dataSource">
+        <ng-template #tableActions let-user>
+          <div class="d-flex flex-wrap justify-content-center">
+            <app-atom-button
+              class="m-1"
+              icon="visibility"
+              [label]="'clientList.viewLabel' | translate"
+              color="primary"
+              [tooltip]="'clientList.viewTooltip' | translate"
+              (clicked)="openDialogView(user)">
+            </app-atom-button>
+
+            <app-atom-button
+              class="m-1"
+              icon="edit"
+              [label]="'clientList.editLabel' | translate"
+              color="primary"
+              [tooltip]="'clientList.editTooltip' | translate"
+              (clicked)="editUser(user)">
+            </app-atom-button>
+
+            <app-atom-button
+              class="m-1"
+              icon="delete"
+              [label]="'clientList.deleteLabel' | translate"
+              color="warn"
+              [tooltip]="'clientList.deleteTooltip' | translate"
+              (clicked)="openDialogDelete(user)">
+            </app-atom-button>
+          </div>
+        </ng-template>
+      </app-molecule-tables>
+    </div>
+  </div>
+
+  <ng-template #userDetailTemplate let-user="user">
+    <div class="container">
+      <div class="row my-2">
+        <div class="col-12 col-md-6 my-1">
+          <strong>{{ 'clientList.userDetailId' | translate }}:</strong> {{ user.id }}
+        </div>
+        <div class="col-12 col-md-6 my-1">
+          <strong>{{ 'clientList.userDetailName' | translate }}:</strong> {{ user.nome }}
+        </div>
+        <div class="col-12 col-md-6 my-1">
+          <strong>{{ 'clientList.userDetailEmail' | translate }}:</strong> {{ user.email }}
+        </div>
+        <div class="col-12 col-md-6 my-1">
+          <strong>{{ 'clientList.userDetailPhone' | translate }}:</strong>
+          {{ user.telefone || ('clientList.userDetailPhoneNotProvided' | translate) }}
+        </div>
+      </div>
+
+      <div class="row mt-4">
+        <div class="col-12">
+          <h5>{{ 'clientList.userDetailAddressTitle' | translate }}</h5>
+        </div>
+        <hr>
+        <div class="col-12 col-md-6 my-1">
+          <strong>{{ 'clientList.userDetailZipcode' | translate }}:</strong> {{ user.endereco.cep }}
+        </div>
+        <div class="col-12 col-md-6 my-1">
+          <strong>{{ 'clientList.userDetailCity' | translate }}:</strong> {{ user.endereco.cidade }}
+        </div>
+        <div class="col-12 col-md-6 my-1">
+          <strong>{{ 'clientList.userDetailState' | translate }}:</strong> {{ user.endereco.estado }}
+        </div>
+        <div class="col-12 col-md-6 my-1">
+          <strong>{{ 'clientList.userDetailNumber' | translate }}:</strong> {{ user.endereco.numero }}
+        </div>
+        <div class="col-12 col-md-6 my-1">
+          <strong>{{ 'clientList.userDetailStreet' | translate }}:</strong> {{ user.endereco.rua }}
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</div>

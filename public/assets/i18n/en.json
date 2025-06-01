@@ -1,0 +1,61 @@
+{
+  "IDIOMA": {
+    "IDIOMA": "Language",
+    "PORTUGUES": "Portuguese",
+    "ENGLISH": "English",
+    "ESPANHOL": "Spanish"
+  },
+  "clientList": {
+    "customersTitle": "Customers",
+    "newCustomerLabel": "New Customer",
+    "newCustomerTooltip": "Add a new customer",
+    "viewLabel": "View",
+    "viewTooltip": "View customer details",
+    "editLabel": "Edit",
+    "editTooltip": "Edit customer",
+    "deleteLabel": "Delete",
+    "deleteTooltip": "Delete customer",
+    "viewDialogTitle": "Customer Details",
+    "deleteDialogTitle": "Delete Customer",
+    "confirmDeleteMessage": "Are you sure you want to delete customer {{name}}?",
+    "confirmButton": "Yes",
+    "cancelButton": "No",
+    "closeButton": "Close",
+    "userDetailId": "ID",
+    "userDetailName": "Name",
+    "userDetailEmail": "Email",
+    "userDetailPhone": "Phone",
+    "userDetailPhoneNotProvided": "Not provided",
+    "userDetailAddressTitle": "Address",
+    "userDetailZipcode": "Zip Code",
+    "userDetailCity": "City",
+    "userDetailState": "State",
+    "userDetailNumber": "Number",
+    "userDetailStreet": "Street",
+    "columnId": "ID",
+    "columnName": "Name",
+    "columnEmail": "Email",
+    "columnActions": "Actions"
+  },
+  "clientForm": {
+    "backTooltip": "Go back to the previous screen!",
+    "titleCreate": "Create customer",
+    "titleEdit": "Edit customer",
+    "sectionPersonalData": "Personal Data",
+    "nameLabel": "Name",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone",
+    "sectionAddress": "Address",
+    "streetLabel": "Street",
+    "numberLabel": "Number",
+    "zipcodeLabel": "ZIP code",
+    "cityLabel": "City",
+    "stateLabel": "State",
+    "submitTooltip": "Save customer data",
+    "submitCreate": "Save Customer",
+    "submitEdit": "Update Customer"
+  },
+  "TABLE": {
+    "NO_DATA": "No data found."
+  }
+}

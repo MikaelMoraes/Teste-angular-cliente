@@ -1,0 +1,39 @@
+
+<div class="mobile-table d-block d-md-none" *ngIf="pagedData.length > 0">
+  <div class="mobile-row my-2" *ngFor="let row of pagedData">
+    <div class="mobile-cell" *ngFor="let column of columns">
+      <strong *ngIf="!column.isAction">{{ column.label }}:</strong>
+      <span *ngIf="!column.isAction">{{ row[column.key] }}</span>
+      <ng-container *ngIf="column.isAction && tableActionsTemplate">
+        <ng-container *ngTemplateOutlet="tableActionsTemplate; context: { $implicit: row }"></ng-container>
+      </ng-container>
+    </div>
+  </div>
+</div>
+
+<div class="mat-elevation-z8 d-none d-md-block" *ngIf="pagedData.length > 0">
+  <table mat-table [dataSource]="pagedData" class="w-100">
+    <ng-container *ngFor="let column of columns" [matColumnDef]="column.key">
+      <th mat-header-cell *matHeaderCellDef>{{ column.label | translate }}</th>
+      <td mat-cell *matCellDef="let row">
+        <ng-container *ngIf="!column.isAction">
+          {{ row[column.key] }}
+        </ng-container>
+        <ng-container *ngIf="column.isAction && tableActionsTemplate">
+          <ng-container *ngTemplateOutlet="tableActionsTemplate; context: { $implicit: row }"></ng-container>
+        </ng-container>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+
+  <app-atom-pagination [length]="dataSource.length" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 50]"
+    (pageChange)="onPageChange($event)">
+  </app-atom-pagination>
+</div>
+
+<div class="text-center py-4 text-muted" *ngIf="pagedData.length === 0">
+  {{ 'TABLE.NO_DATA' | translate }}
+</div>

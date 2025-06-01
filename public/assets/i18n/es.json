@@ -1,0 +1,61 @@
+{
+  "IDIOMA": {
+    "IDIOMA": "Idioma",
+    "PORTUGUES": "Portugués",
+    "ENGLISH": "Inglés",
+    "ESPANHOL": "Español"
+  },
+  "clientList": {
+    "customersTitle": "Clientes",
+    "newCustomerLabel": "Nuevo Cliente",
+    "newCustomerTooltip": "Agregar nuevo cliente",
+    "viewLabel": "Ver",
+    "viewTooltip": "Ver detalles del cliente",
+    "editLabel": "Editar",
+    "editTooltip": "Editar cliente",
+    "deleteLabel": "Eliminar",
+    "deleteTooltip": "Eliminar cliente",
+    "viewDialogTitle": "Detalles del Cliente",
+    "deleteDialogTitle": "Eliminar Cliente",
+    "confirmDeleteMessage": "¿Está seguro de que desea eliminar al cliente {{name}}?",
+    "confirmButton": "Sí",
+    "cancelButton": "No",
+    "closeButton": "Cerrar",
+    "userDetailId": "ID",
+    "userDetailName": "Nombre",
+    "userDetailEmail": "Correo electrónico",
+    "userDetailPhone": "Teléfono",
+    "userDetailPhoneNotProvided": "No proporcionado",
+    "userDetailAddressTitle": "Dirección",
+    "userDetailZipcode": "Código Postal",
+    "userDetailCity": "Ciudad",
+    "userDetailState": "Estado",
+    "userDetailNumber": "Número",
+    "userDetailStreet": "Calle",
+    "columnId": "ID",
+    "columnName": "Nombre",
+    "columnEmail": "Correo electrónico",
+    "columnActions": "Acciones"
+  },
+  "clientForm": {
+    "backTooltip": "¡Volver a la pantalla anterior!",
+    "titleCreate": "Crear cliente",
+    "titleEdit": "Editar cliente",
+    "sectionPersonalData": "Datos Personales",
+    "nameLabel": "Nombre",
+    "emailLabel": "Correo electrónico",
+    "phoneLabel": "Teléfono",
+    "sectionAddress": "Dirección",
+    "streetLabel": "Calle",
+    "numberLabel": "Número",
+    "zipcodeLabel": "Código postal",
+    "cityLabel": "Ciudad",
+    "stateLabel": "Estado",
+    "submitTooltip": "Guardar datos del cliente",
+    "submitCreate": "Guardar Cliente",
+    "submitEdit": "Actualizar Cliente"
+  },
+  "TABLE": {
+    "NO_DATA": "No se encontraron datos."
+  }
+}

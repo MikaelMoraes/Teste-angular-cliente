@@ -1,0 +1,13 @@
+<app-painel class="m-3">
+  <div class="row">
+    <div class="col-12">
+      <app-atom-select [label]="'IDIOMA.IDIOMA' | translate" [options]="[
+    { value: 'pt', label: ('IDIOMA.PORTUGUES' | translate) },
+    { value: 'en', label: ('IDIOMA.ENGLISH' | translate) },
+    { value: 'es', label: ('IDIOMA.ESPANHOL' | translate) }
+  ]" [(value)]="idiomaSelecionado" (valueChange)="onIdiomaChange($event)"></app-atom-select>
+    </div>
+  </div>
+  <!-- Aqui vai o conteúdo da página -->
+  <router-outlet></router-outlet>
+</app-painel>
