@@ -2,7 +2,7 @@
 <div class="mobile-table d-block d-md-none" *ngIf="pagedData.length > 0">
   <div class="mobile-row my-2" *ngFor="let row of pagedData">
     <div class="mobile-cell" *ngFor="let column of columns">
-      <strong *ngIf="!column.isAction">{{ column.label }}:</strong>
+      <strong *ngIf="!column.isAction">{{ column.label | translate }}:</strong>
       <span *ngIf="!column.isAction">{{ row[column.key] }}</span>
       <ng-container *ngIf="column.isAction && tableActionsTemplate">
         <ng-container *ngTemplateOutlet="tableActionsTemplate; context: { $implicit: row }"></ng-container>
