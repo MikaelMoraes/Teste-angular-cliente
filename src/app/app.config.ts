@@ -17,7 +17,7 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
-    provideHttpClient(withInterceptorsFromDi()), // <-- antes de importProvidersFrom!
+    provideHttpClient(withInterceptorsFromDi()), 
     importProvidersFrom(
       TranslateModule.forRoot({
         loader: {

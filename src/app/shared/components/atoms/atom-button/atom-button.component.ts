@@ -23,7 +23,6 @@ export class AtomButtonComponent {
     return {
       'btn-small': this.size === 'small',
       'btn-large': this.size === 'large',
-      // 'btn-medium' opcional, se quiser aplicar algo específico
     };
   }
   onClick() {

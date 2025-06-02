@@ -17,9 +17,7 @@ export class AppComponent {
     this.translate.setDefaultLang('pt');
     this.translate.use('pt');
   }
-
-
-
+  
   idiomaSelecionado = 'pt';
 
   onIdiomaChange(lang: string) {

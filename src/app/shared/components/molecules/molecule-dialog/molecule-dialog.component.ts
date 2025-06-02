@@ -8,8 +8,8 @@ export interface CustomDialogData {
   title?: string;
   content?: string;
   htmlContent?: string;
-  contentTemplate?: TemplateRef<any>; // Novo campo: slot
-  context?: any; // Novo campo: contexto do slot
+  contentTemplate?: TemplateRef<any>; 
+  context?: any; 
   width?: string;
   height?: string;
   showCancelButton?: boolean;
