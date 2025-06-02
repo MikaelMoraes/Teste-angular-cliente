@@ -9,6 +9,9 @@
       </ng-container>
     </div>
   </div>
+  <app-atom-pagination [length]="dataSource.length" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 50]"
+    (pageChange)="onPageChange($event)">
+  </app-atom-pagination>
 </div>
 
 <div class="mat-elevation-z8 d-none d-md-block" *ngIf="pagedData.length > 0">
